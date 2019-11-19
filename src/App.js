@@ -1,4 +1,6 @@
-import React,{Component} from 'react';
+import React,{Component, Fragment} from 'react';
+import Header from './components/Header';
+import ListaNoticias from './components/ListaNoticias';
 
 class App extends Component {
   state = {
@@ -22,9 +24,17 @@ class App extends Component {
  
   render() {
     return (
-      <div>
-        App
-      </div>
+      <Fragment>
+        <Header 
+          titulo='Buscador de Noticias AHH'
+        />
+
+        <div className="container white contenedor-noticias">
+          <ListaNoticias
+            noticias={this.state.noticias}
+          />
+        </div>
+      </Fragment>
     );
   }
 }
