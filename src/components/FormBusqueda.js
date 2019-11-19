@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 
 class FormBusqueda extends Component{
     state={
@@ -39,6 +40,10 @@ class FormBusqueda extends Component{
             </div>
         );
     }
+}
+
+FormBusqueda.propTypes ={
+ consultarNoticias : PropTypes.func.isRequired
 }
 
 export default FormBusqueda;
